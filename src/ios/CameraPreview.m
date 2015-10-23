@@ -294,6 +294,11 @@
                                   }
                                   dispatch_group_leave(group);
                           }];
+                          
+                          ////Encode Preview Image in base64
+                            UIImage *newPreviewImage = [[UIImage alloc]initWithCGImage:previewImage];
+                            NSData *imageData2 = UIImageJPEGRepresentation(newPreviewImage,0.0);
+                            NSString *base64PreviewImg = [imageData2 base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 
                          dispatch_group_notify(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                                 NSMutableArray *params = [[NSMutableArray alloc] init];
@@ -308,6 +313,7 @@
                                         // Success returns two elements in the returned array
                                         [params addObject:originalPicturePath];
                                         [params addObject:previewPicturePath];
+                                        [params addObject:base64PreviewImg];
                                 }
 
                                 CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:params];
