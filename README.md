@@ -108,7 +108,8 @@ Use the cordova-file in order to read the picture file and them get the base64.<
 Please, refer to this documentation: http://docs.phonegap.com/en/edge/cordova_file_file.md.html<br/>
 Method <i>readAsDataURL</i>: Read file and return data as a base64-encoded data URL.
 
-You can also get the base64 jpg image in the callback function as the third parameter. Please refer to
+<b>Base64 image - iOS only</b>
+For iOS, you can also get the base64 jpg image in the callback function as the third parameter. Please refer to <a href="https://github.com/Jimbo13M/CordovaCameraPreview/blob/master/base64-example.html">this example</a>
 
 <b>Sample:</b><br/>
 Please see the <a href="https://github.com/mbppower/CordovaCameraPreviewApp">CordovaCameraPreviewApp</a> for a complete working example for Android and iOS platforms.
