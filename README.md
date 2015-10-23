@@ -109,7 +109,7 @@ Please, refer to this documentation: http://docs.phonegap.com/en/edge/cordova_fi
 Method <i>readAsDataURL</i>: Read file and return data as a base64-encoded data URL.
 
 <b>Base64 image - iOS only</b>
-For iOS, you can also get the base64 jpg image in the callback function as the third parameter. Please refer to <a href="https://github.com/Jimbo13M/CordovaCameraPreview/blob/master/base64-example.html">this example</a>
+For iOS, you can also get the base64 jpg image in the callback function as the third parameter. Please refer to <a href="https://github.com/Jimbo13M/CordovaCameraPreview/blob/master/base64-example.html">this example</a>.
 
 <b>Sample:</b><br/>
 Please see the <a href="https://github.com/mbppower/CordovaCameraPreviewApp">CordovaCameraPreviewApp</a> for a complete working example for Android and iOS platforms.
