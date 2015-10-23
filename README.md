@@ -74,6 +74,10 @@ cordova.plugins.camerapreview.takePicture({maxWidth:640, maxHeight:640});
 cordova.plugins.camerapreview.setOnPictureTakenHandler(function(result){
 	document.getElementById('originalPicture').src = result[0];//originalPicturePath;
 	document.getElementById('previewPicture').src = result[1];//previewPicturePath;
+	var b64url = result[2];//previewPicturePath as base64
+    	b64url = b64url.replace('file:///','');
+    	b64url = 'data:image/jpg;base64,'+b64url;
+    	document.getElementById('renderImage').src = b64url;
 });
 ```
 
@@ -103,6 +107,8 @@ cordova.plugins.camerapreview.hide();
 Use the cordova-file in order to read the picture file and them get the base64.<br/>
 Please, refer to this documentation: http://docs.phonegap.com/en/edge/cordova_file_file.md.html<br/>
 Method <i>readAsDataURL</i>: Read file and return data as a base64-encoded data URL.
+
+You can also get the base64 jpg image in the callback function as the third parameter. Please refer to
 
 <b>Sample:</b><br/>
 Please see the <a href="https://github.com/mbppower/CordovaCameraPreviewApp">CordovaCameraPreviewApp</a> for a complete working example for Android and iOS platforms.
